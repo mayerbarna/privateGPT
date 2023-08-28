@@ -1,0 +1,194 @@
+[TICKET] Id: #2782, Title: Auto Import Nielsen estimation file from FTP, Description: Description The main goal is to update estimation data in TPM DB automaticaly. Motivation for change The estimation data upload done manually via corporation admins. If we automate this task they have one less thing to think about. Proposed solution This zip (w24_Nielsen_estimate_minta.zip) contains 3 files. An estimation XLSX file which is exported directly via TechEdge (w24_Spots Estimated GRP(avgW) - from 2023 05 09 - 210 TA_20230620_220732.xlsx) An estimaton CSV file which is saved as csf from the xlsx file above (w24_Spots Estimated GRP(avgW) - from 2023 05 09 - 210 TA_20230620_220732.csv) An estimation CSV file which is exported directly via TechEdge (w24_directCSV_Spots Estimated GRP(avgW) - from 2023 05 09 - 210 TA_20230621_164950.csv) The fisrts thing noticed is the 2 csv files (with same content) has a masive size difference (9MB vs. 18.5 MB) We have to investigate whats the difference.We have to update the nielsen importer to check estimation file on FTP. If an estimation file is found on FTP we have to import in a same way as the manual estimation file import works on TPM Admin site., Time spent: 32 h, Assignee: Barna Mayer, Project: TPM, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: #2060, Title: Automated tests for Nielsen importer with Pytest, Description: Description Create automated tests with Pytest which cover functional requirements of the importer. Some use cases below: TODO Motivation for change Ensure better stability, avoid regressions. Proposed solution, Time spent: nan, Assignee: Barna Mayer, Project: TPM, Tech Stack: Python, Status: Open, 
+
+[TICKET] Id: #2537, Title: Nielsen Importer - handle duplicate spots, Description: During the csv import, a scenario might occour when duplicate spots are created in the database. It is an unwanted behaviour so we need to handle that., Time spent: 10h, Assignee: Barna Mayer, Project: TPM, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: #2319, Title: The GRPs do not match in the report and in the Advantage., Description: They are probably not matching because we store the values up to 6 decimal place.  To increase the accuracy of the calculation we have to be able to store these values with 12 decimal places., Time spent: 2h, Assignee: Barna Mayer, Project: TPM, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: #1233, Title: Implement the process to upload estimation files , Description: Enable TPM admins to upload estimation files as well. For that we need to implement the CSV import and a process to allow them the upload., Time spent: 20h, Assignee: Kis János, Project: TPM, Tech Stack: TypeScript, Status: Closed, 
+
+[TICKET] Id: #1233, Title: Implement the process to upload estimation files , Description: Enable TPM admins to upload estimation files as well. For that we need to implement the CSV import and a process to allow them the upload., Time spent: 20h, Assignee: Kis János, Project: TPM, Tech Stack: TypeScript, Status: Closed, 
+
+[TICKET] Id: ANN-1074, Title: Export CSV on order list, Description: Allow users to export the orders from the order list as CSV file. The export should be identical to the displayed order list (incl. applying search and filter criteria), Time spent: 2d, Assignee: Krisztián Salgó, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-1139, Title: CSV export format is broken on different type of operating systems. Fix line breaking, Description: Line braking needs to be fixed, Time spent: 1h, Assignee: Krisztián Salgó, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+: Krisztián Salgó, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-1139, Title: CSV export format is broken on different type of operating systems. Fix line breaking, Description: Line braking needs to be fixed, Time spent: 1h, Assignee: Krisztián Salgó, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-1164, Title: Excel Export: Remove end customer names, Description: When exporting order lists to CSV, do not include names, phone numbers, email addresses of end customers. (I think at this time we only export names).  This requirement is due to data protection guidelines. This rule must be applied to retailer, delivery provider, and support team export., Time spent: 2h, Assignee: Krisztián Salgó, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-1164, Title: Excel Export: Remove end customer names, Description: When exporting order lists to CSV, do not include names, phone numbers, email addresses of end customers. (I think at this time we only export names).  This requirement is due to data protection guidelines. This rule must be applied to retailer, delivery provider, and support team export., Time spent: 2h, Assignee: Krisztián Salgó, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-1525, Title: Delivery Provider Pricing: E2E Tests, Description: Add E2E tests for the delivery provider pricing page., Time spent: 1h, Assignee: Krisztián Salgó, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-1525, Title: Delivery Provider Pricing: E2E Tests, Description: Add E2E tests for the delivery provider pricing page., Time spent: 1h, Assignee: Krisztián Salgó, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-1477, Title: Add E2E tests for Expert mode, Description: Add E2E tests for Expert mode, Time spent: 1d, Assignee: Norbert Kiss, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-1477, Title: Add E2E tests for Expert mode, Description: Add E2E tests for Expert mode, Time spent: 1d, Assignee: Norbert Kiss, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: #486, Title: Application version number, Description: Summary The application has no version numbering at all. We must add version numbering to the application. The application's version number must be displayed on the login screen. Motivation for change Extending the application with a version number will make tracking bugs, bugfixes and other changes easier between deployment., Time spent: 1d, Assignee: József Frank, Project: Bator, Tech Stack: Angular, Status: Closed, 
+
+[TICKET] Id: #486, Title: Application version number, Description: Summary The application has no version numbering at all. We must add version numbering to the application. The application's version number must be displayed on the login screen. Motivation for change Extending the application with a version number will make tracking bugs, bugfixes and other changes easier between deployment., Time spent: 1d, Assignee: József Frank, Project: Bator, Tech Stack: Angular, Status: Closed, 
+
+[TICKET] Id: ANN-1277, Title: Add application version to the navigation bar, Description: Add the deployed (and later, built) application version to the navigation bar. The application version is currently not available and we need to introduce it as an environment variable / Django setting. By default, it should be on the bottom of the open navigation bar (to also cover the mobile case)., Time spent: 1d, Assignee: Barna Mayer, Project: Annanow, Tech Stack: Django Template, Status: Closed, 
+
+[TICKET] Id: ANN-1277, Title: Add application version to the navigation bar, Description: Add the deployed (and later, built) application version to the navigation bar. The application version is currently not available and we need to introduce it as an environment variable / Django setting. By default, it should be on the bottom of the open navigation bar (to also cover the mobile case)., Time spent: 1d, Assignee: Barna Mayer, Project: Annanow, Tech Stack: Django Template, Status: Closed, 
+
+[TICKET] Id: #445, Title: Add Spanish translations to Bator, Description: Summary The application's language support is constantly evolving. So far the app is able to display translation for the words used by students in Hungarian, German, French, and Turkish. This issue covers grabbing Spanish translations from Azure's Translation API for the words we already collected with the application's AI. The "Native Language" select input must also be extended with the Spanish option, so users can Spanish as their native language. Motivation for change Support Spanish translations for our bag of words., Time spent: 2h, Assignee: Kristijan Bognar, Project: Bator, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: #445, Title: Add Spanish translations to Bator, Description: Summary The application's language support is constantly evolving. So far the app is able to display translation for the words used by students in Hungarian, German, French, and Turkish. This issue covers grabbing Spanish translations from Azure's Translation API for the words we already collected with the application's AI. The "Native Language" select input must also be extended with the Spanish option, so users can Spanish as their native language. Motivation for change Support Spanish translations for our bag of words., Time spent: 2h, Assignee: Kristijan Bognar, Project: Bator, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-490, Title: Support French and English language, Description: Translate all UI to support German, French, Italian and English, Time spent: 1h, Assignee: Norbert Kiss, Project: Annanow, Tech Stack: Django Template, Status: Closed, 
+
+[TICKET] Id: ANN-490, Title: Support French and English language, Description: Translate all UI to support German, French, Italian and English, Time spent: 1h, Assignee: Norbert Kiss, Project: Annanow, Tech Stack: Django Template, Status: Closed, 
+
+[TICKET] Id: ANN-566, Title: Order Slips, Description: Need to generate and print order slips as a PDF file., Time spent: 3h, Assignee: Zsuzsanna Ürmössy, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-138, Title: i18n Support: Internationalization of invoice and email texts, Description: Currently, the texts on the invoice and emails include: hard-coded German texts English reference data labels date formats, that are fixed to the Swiss/German standard A proper solution would be to introduce internationalization of texts, which enables rendering of language specific texts with the same source base., Time spent: 2h, Assignee: Gabor Ginter, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-138, Title: i18n Support: Internationalization of invoice and email texts, Description: Currently, the texts on the invoice and emails include: hard-coded German texts English reference data labels date formats, that are fixed to the Swiss/German standard A proper solution would be to introduce internationalization of texts, which enables rendering of language specific texts with the same source base., Time spent: 2h, Assignee: Gabor Ginter, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: #000, Title: Student data CSV, Description: Export Student data to CSV., Time spent: 2h, Assignee: Gabor Ginter, Project: Bator, Tech Stack: Python, Status: Closed, 
+
+ect: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: #000, Title: Student data CSV, Description: Export Student data to CSV., Time spent: 2h, Assignee: Gabor Ginter, Project: Bator, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: #2782, Title: Auto Import Nielsen estimation file from FTP, Description: Description The main goal is to update estimation data in TPM DB automaticaly. Motivation for change The estimation data upload done manually via corporation admins. If we automate this task they have one less thing to think about. Proposed solution This zip (w24_Nielsen_estimate_minta.zip) contains 3 files. An estimation XLSX file which is exported directly via TechEdge (w24_Spots Estimated GRP(avgW) - from 2023 05 09 - 210 TA_20230620_220732.xlsx) An estimaton CSV file which is saved as csf from the xlsx file above (w24_Spots Estimated GRP(avgW) - from 2023 05 09 - 210 TA_20230620_220732.csv) An estimation CSV file which is exported directly via TechEdge (w24_directCSV_Spots Estimated GRP(avgW) - from 2023 05 09 - 210 TA_20230621_164950.csv) The fisrts thing noticed is the 2 csv files (with same content) has a masive size difference (9MB vs. 18.5 MB) We have to investigate whats the difference.We have to update the nielsen importer to check estimation file on FTP. If an estimation file is found on FTP we have to import in a same way as the manual estimation file import works on TPM Admin site., Time spent: 32 h, Assignee: Barna Mayer, Project: TPM, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: #2060, Title: Automated tests for Nielsen importer with Pytest, Description: Description Create automated tests with Pytest which cover functional requirements of the importer. Some use cases below: TODO Motivation for change Ensure better stability, avoid regressions. Proposed solution, Time spent: nan, Assignee: Barna Mayer, Project: TPM, Tech Stack: Python, Status: Open, 
+
+[TICKET] Id: #2537, Title: Nielsen Importer - handle duplicate spots, Description: During the csv import, a scenario might occour when duplicate spots are created in the database. It is an unwanted behaviour so we need to handle that., Time spent: 10h, Assignee: Barna Mayer, Project: TPM, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: #2319, Title: The GRPs do not match in the report and in the Advantage., Description: They are probably not matching because we store the values up to 6 decimal place.  To increase the accuracy of the calculation we have to be able to store these values with 12 decimal places., Time spent: 2h, Assignee: Barna Mayer, Project: TPM, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: #1233, Title: Implement the process to upload estimation files , Description: Enable TPM admins to upload estimation files as well. For that we need to implement the CSV import and a process to allow them the upload., Time spent: 20h, Assignee: Kis János, Project: TPM, Tech Stack: TypeScript, Status: Closed, 
+
+[TICKET] Id: ANN-1074, Title: Export CSV on order list, Description: Allow users to export the orders from the order list as CSV file. The export should be identical to the displayed order list (incl. applying search and filter criteria), Time spent: 2d, Assignee: Krisztián Salgó, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-1139, Title: CSV export format is broken on different type of operating systems. Fix line breaking, Description: Line braking needs to be fixed, Time spent: 1h, Assignee: Krisztián Salgó, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-1164, Title: Excel Export: Remove end customer names, Description: When exporting order lists to CSV, do not include names, phone numbers, email addresses of end customers. (I think at this time we only export names).  This requirement is due to data protection guidelines. This rule must be applied to retailer, delivery provider, and support team export., Time spent: 2h, Assignee: Krisztián Salgó, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-1525, Title: Delivery Provider Pricing: E2E Tests, Description: Add E2E tests for the delivery provider pricing page., Time spent: 1h, Assignee: Krisztián Salgó, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-1477, Title: Add E2E tests for Expert mode, Description: Add E2E tests for Expert mode, Time spent: 1d, Assignee: Norbert Kiss, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: #486, Title: Application version number, Description: Summary The application has no version numbering at all. We must add version numbering to the application. The application's version number must be displayed on the login screen. Motivation for change Extending the application with a version number will make tracking bugs, bugfixes and other changes easier between deployment., Time spent: 1d, Assignee: József Frank, Project: Bator, Tech Stack: Angular, Status: Closed, 
+
+[TICKET] Id: ANN-1277, Title: Add application version to the navigation bar, Description: Add the deployed (and later, built) application version to the navigation bar. The application version is currently not available and we need to introduce it as an environment variable / Django setting. By default, it should be on the bottom of the open navigation bar (to also cover the mobile case)., Time spent: 1d, Assignee: Barna Mayer, Project: Annanow, Tech Stack: Django Template, Status: Closed, 
+
+[TICKET] Id: #445, Title: Add Spanish translations to Bator, Description: Summary The application's language support is constantly evolving. So far the app is able to display translation for the words used by students in Hungarian, German, French, and Turkish. This issue covers grabbing Spanish translations from Azure's Translation API for the words we already collected with the application's AI. The "Native Language" select input must also be extended with the Spanish option, so users can Spanish as their native language. Motivation for change Support Spanish translations for our bag of words., Time spent: 2h, Assignee: Kristijan Bognar, Project: Bator, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-490, Title: Support French and English language, Description: Translate all UI to support German, French, Italian and English, Time spent: 1h, Assignee: Norbert Kiss, Project: Annanow, Tech Stack: Django Template, Status: Closed, 
+
+[TICKET] Id: ANN-566, Title: Order Slips, Description: Need to generate and print order slips as a PDF file., Time spent: 3h, Assignee: Zsuzsanna Ürmössy, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-138, Title: i18n Support: Internationalization of invoice and email texts, Description: Currently, the texts on the invoice and emails include: hard-coded German texts English reference data labels date formats, that are fixed to the Swiss/German standard A proper solution would be to introduce internationalization of texts, which enables rendering of language specific texts with the same source base., Time spent: 2h, Assignee: Gabor Ginter, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-001, Title: Option to print AlDI invoices as PDF, Description: Generate PDF from an invoice and add option to print it., Time spent: 2h, Assignee: Gabor Ginter, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: #000, Title: Student data CSV, Description: Export Student data to CSV., Time spent: 2h, Assignee: Gabor Ginter, Project: Bator, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: #2782, Title: Auto Import Nielsen estimation file from FTP, Description: Description The main goal is to update estimation data in TPM DB automaticaly. Motivation for change The estimation data upload done manually via corporation admins. If we automate this task they have one less thing to think about. Proposed solution This zip (w24_Nielsen_estimate_minta.zip) contains 3 files. An estimation XLSX file which is exported directly via TechEdge (w24_Spots Estimated GRP(avgW) - from 2023 05 09 - 210 TA_20230620_220732.xlsx) An estimaton CSV file which is saved as csf from the xlsx file above (w24_Spots Estimated GRP(avgW) - from 2023 05 09 - 210 TA_20230620_220732.csv) An estimation CSV file which is exported directly via TechEdge (w24_directCSV_Spots Estimated GRP(avgW) - from 2023 05 09 - 210 TA_20230621_164950.csv) The fisrts thing noticed is the 2 csv files (with same content) has a masive size difference (9MB vs. 18.5 MB) We have to investigate whats the difference.We have to update the nielsen importer to check estimation file on FTP. If an estimation file is found on FTP we have to import in a same way as the manual estimation file import works on TPM Admin site., Time spent: 32 h, Assignee: Barna Mayer, Project: TPM, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: #2060, Title: Automated tests for Nielsen importer with Pytest, Description: Description Create automated tests with Pytest which cover functional requirements of the importer. Some use cases below: TODO Motivation for change Ensure better stability, avoid regressions. Proposed solution, Time spent: nan, Assignee: Barna Mayer, Project: TPM, Tech Stack: Python, Status: Open, 
+
+[TICKET] Id: #2537, Title: Nielsen Importer - handle duplicate spots, Description: During the csv import, a scenario might occour when duplicate spots are created in the database. It is an unwanted behaviour so we need to handle that., Time spent: 10h, Assignee: Barna Mayer, Project: TPM, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: #2319, Title: The GRPs do not match in the report and in the Advantage., Description: They are probably not matching because we store the values up to 6 decimal place.  To increase the accuracy of the calculation we have to be able to store these values with 12 decimal places., Time spent: 2h, Assignee: Barna Mayer, Project: TPM, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: #1233, Title: Implement the process to upload estimation files , Description: Enable TPM admins to upload estimation files as well. For that we need to implement the CSV import and a process to allow them the upload., Time spent: 20h, Assignee: Kis János, Project: TPM, Tech Stack: TypeScript, Status: Closed, 
+
+[TICKET] Id: ANN-1074, Title: Export CSV on order list, Description: Allow users to export the orders from the order list as CSV file. The export should be identical to the displayed order list (incl. applying search and filter criteria), Time spent: 2d, Assignee: Krisztián Salgó, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-1139, Title: CSV export format is broken on different type of operating systems. Fix line breaking, Description: Line braking needs to be fixed, Time spent: 1h, Assignee: Krisztián Salgó, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-1164, Title: Excel Export: Remove end customer names, Description: When exporting order lists to CSV, do not include names, phone numbers, email addresses of end customers. (I think at this time we only export names).  This requirement is due to data protection guidelines. This rule must be applied to retailer, delivery provider, and support team export., Time spent: 2h, Assignee: Krisztián Salgó, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-1525, Title: Delivery Provider Pricing: E2E Tests, Description: Add E2E tests for the delivery provider pricing page., Time spent: 1h, Assignee: Krisztián Salgó, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-1477, Title: Add E2E tests for Expert mode, Description: Add E2E tests for Expert mode, Time spent: 1d, Assignee: Norbert Kiss, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: #486, Title: Application version number, Description: Summary The application has no version numbering at all. We must add version numbering to the application. The application's version number must be displayed on the login screen. Motivation for change Extending the application with a version number will make tracking bugs, bugfixes and other changes easier between deployment., Time spent: 1d, Assignee: József Frank, Project: Bator, Tech Stack: Angular, Status: Closed, 
+
+[TICKET] Id: ANN-1277, Title: Add application version to the navigation bar, Description: Add the deployed (and later, built) application version to the navigation bar. The application version is currently not available and we need to introduce it as an environment variable / Django setting. By default, it should be on the bottom of the open navigation bar (to also cover the mobile case)., Time spent: 1d, Assignee: Barna Mayer, Project: Annanow, Tech Stack: Django Template, Status: Closed, 
+
+[TICKET] Id: #445, Title: Add Spanish translations to Bator, Description: Summary The application's language support is constantly evolving. So far the app is able to display translation for the words used by students in Hungarian, German, French, and Turkish. This issue covers grabbing Spanish translations from Azure's Translation API for the words we already collected with the application's AI. The "Native Language" select input must also be extended with the Spanish option, so users can Spanish as their native language. Motivation for change Support Spanish translations for our bag of words., Time spent: 2h, Assignee: Kristijan Bognar, Project: Bator, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-490, Title: Support French and English language, Description: Translate all UI to support German, French, Italian and English, Time spent: 1h, Assignee: Norbert Kiss, Project: Annanow, Tech Stack: Django Template, Status: Closed, 
+
+[TICKET] Id: ANN-566, Title: Order Slips, Description: Need to generate and print order slips as a PDF file., Time spent: 3h, Assignee: Zsuzsanna Ürmössy, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-138, Title: i18n Support: Internationalization of invoice and email texts, Description: Currently, the texts on the invoice and emails include: hard-coded German texts English reference data labels date formats, that are fixed to the Swiss/German standard A proper solution would be to introduce internationalization of texts, which enables rendering of language specific texts with the same source base., Time spent: 2h, Assignee: Gabor Ginter, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-001, Title: Option to print AlDI invoices as PDF, Description: Generate PDF from an invoice and add option to print it., Time spent: 2h, Assignee: Gabor Ginter, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: #000, Title: Student data CSV, Description: Export Student data to CSV., Time spent: 2h, Assignee: Gabor Ginter, Project: Bator, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: #2782, Title: Auto Import Nielsen estimation file from FTP, Description: Description The main goal is to update estimation data in TPM DB automaticaly. Motivation for change The estimation data upload done manually via corporation admins. If we automate this task they have one less thing to think about. Proposed solution This zip (w24_Nielsen_estimate_minta.zip) contains 3 files. An estimation XLSX file which is exported directly via TechEdge (w24_Spots Estimated GRP(avgW) - from 2023 05 09 - 210 TA_20230620_220732.xlsx) An estimaton CSV file which is saved as csf from the xlsx file above (w24_Spots Estimated GRP(avgW) - from 2023 05 09 - 210 TA_20230620_220732.csv) An estimation CSV file which is exported directly via TechEdge (w24_directCSV_Spots Estimated GRP(avgW) - from 2023 05 09 - 210 TA_20230621_164950.csv) The fisrts thing noticed is the 2 csv files (with same content) has a masive size difference (9MB vs. 18.5 MB) We have to investigate whats the difference.We have to update the nielsen importer to check estimation file on FTP. If an estimation file is found on FTP we have to import in a same way as the manual estimation file import works on TPM Admin site., Time spent: 32 h, Assignee: Barna Mayer, Project: TPM, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: #2060, Title: Automated tests for Nielsen importer with Pytest, Description: Description Create automated tests with Pytest which cover functional requirements of the importer. Some use cases below: TODO Motivation for change Ensure better stability, avoid regressions. Proposed solution, Time spent: nan, Assignee: Barna Mayer, Project: TPM, Tech Stack: Python, Status: Open, 
+
+[TICKET] Id: #2537, Title: Nielsen Importer - handle duplicate spots, Description: During the csv import, a scenario might occour when duplicate spots are created in the database. It is an unwanted behaviour so we need to handle that., Time spent: 10h, Assignee: Barna Mayer, Project: TPM, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: #2319, Title: The GRPs do not match in the report and in the Advantage., Description: They are probably not matching because we store the values up to 6 decimal place.  To increase the accuracy of the calculation we have to be able to store these values with 12 decimal places., Time spent: 2h, Assignee: Barna Mayer, Project: TPM, Tech Stack: Python, Status: Closed, 
+
+s 3 files. An estimation XLSX file which is exported directly via TechEdge (w24_Spots Estimated GRP(avgW) - from 2023 05 09 - 210 TA_20230620_220732.xlsx) An estimaton CSV file which is saved as csf from the xlsx file above (w24_Spots Estimated GRP(avgW) - from 2023 05 09 - 210 TA_20230620_220732.csv) An estimation CSV file which is exported directly via TechEdge (w24_directCSV_Spots Estimated GRP(avgW) - from 2023 05 09 - 210 TA_20230621_164950.csv) The fisrts thing noticed is the 2 csv files (with same content) has a masive size difference (9MB vs. 18.5 MB) We have to investigate whats the difference.We have to update the nielsen importer to check estimation file on FTP. If an estimation file is found on FTP we have to import in a same way as the manual estimation file import works on TPM Admin site., Time spent: 32 h, Assignee: Barna Mayer, Project: TPM, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: #2060, Title: Automated tests for Nielsen importer with Pytest, Description: Description Create automated tests with Pytest which cover functional requirements of the importer. Some use cases below: TODO Motivation for change Ensure better stability, avoid regressions. Proposed solution, Time spent: nan, Assignee: Barna Mayer, Project: TPM, Tech Stack: Python, Status: Open, 
+
+[TICKET] Id: ANN-1074, Title: Export CSV on order list, Description: Allow users to export the orders from the order list as CSV file. The export should be identical to the displayed order list (incl. applying search and filter criteria), Time spent: 2d, Assignee: Krisztián Salgó, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: #2537, Title: Nielsen Importer - handle duplicate spots, Description: During the csv import, a scenario might occour when duplicate spots are created in the database. It is an unwanted behaviour so we need to handle that., Time spent: 10h, Assignee: Barna Mayer, Project: TPM, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-1139, Title: CSV export format is broken on different type of operating systems. Fix line breaking, Description: Line braking needs to be fixed, Time spent: 1h, Assignee: Krisztián Salgó, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: #2319, Title: The GRPs do not match in the report and in the Advantage., Description: They are probably not matching because we store the values up to 6 decimal place.  To increase the accuracy of the calculation we have to be able to store these values with 12 decimal places., Time spent: 2h, Assignee: Barna Mayer, Project: TPM, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-1164, Title: Excel Export: Remove end customer names, Description: When exporting order lists to CSV, do not include names, phone numbers, email addresses of end customers. (I think at this time we only export names).  This requirement is due to data protection guidelines. This rule must be applied to retailer, delivery provider, and support team export., Time spent: 2h, Assignee: Krisztián Salgó, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-1525, Title: Delivery Provider Pricing: E2E Tests, Description: Add E2E tests for the delivery provider pricing page., Time spent: 1h, Assignee: Krisztián Salgó, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: #1233, Title: Implement the process to upload estimation files , Description: Enable TPM admins to upload estimation files as well. For that we need to implement the CSV import and a process to allow them the upload., Time spent: 20h, Assignee: Kis János, Project: TPM, Tech Stack: TypeScript, Status: Closed, 
+
+[TICKET] Id: ANN-1477, Title: Add E2E tests for Expert mode, Description: Add E2E tests for Expert mode, Time spent: 1d, Assignee: Norbert Kiss, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-1074, Title: Export CSV on order list, Description: Allow users to export the orders from the order list as CSV file. The export should be identical to the displayed order list (incl. applying search and filter criteria), Time spent: 2d, Assignee: Krisztián Salgó, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-1139, Title: CSV export format is broken on different type of operating systems. Fix line breaking, Description: Line braking needs to be fixed, Time spent: 1h, Assignee: Krisztián Salgó, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+ange Extending the application with a version number will make tracking bugs, bugfixes and other changes easier between deployment., Time spent: 1d, Assignee: József Frank, Project: Bator, Tech Stack: Angular, Status: Closed, 
+
+[TICKET] Id: ANN-1277, Title: Add application version to the navigation bar, Description: Add the deployed (and later, built) application version to the navigation bar. The application version is currently not available and we need to introduce it as an environment variable / Django setting. By default, it should be on the bottom of the open navigation bar (to also cover the mobile case)., Time spent: 1d, Assignee: Barna Mayer, Project: Annanow, Tech Stack: Django Template, Status: Closed, 
+
+[TICKET] Id: ANN-1525, Title: Delivery Provider Pricing: E2E Tests, Description: Add E2E tests for the delivery provider pricing page., Time spent: 1h, Assignee: Krisztián Salgó, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+n, French, and Turkish. This issue covers grabbing Spanish translations from Azure's Translation API for the words we already collected with the application's AI. The "Native Language" select input must also be extended with the Spanish option, so users can Spanish as their native language. Motivation for change Support Spanish translations for our bag of words., Time spent: 2h, Assignee: Kristijan Bognar, Project: Bator, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-1477, Title: Add E2E tests for Expert mode, Description: Add E2E tests for Expert mode, Time spent: 1d, Assignee: Norbert Kiss, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+ech Stack: Django Template, Status: Closed, 
+
+[TICKET] Id: #486, Title: Application version number, Description: Summary The application has no version numbering at all. We must add version numbering to the application. The application's version number must be displayed on the login screen. Motivation for change Extending the application with a version number will make tracking bugs, bugfixes and other changes easier between deployment., Time spent: 1d, Assignee: József Frank, Project: Bator, Tech Stack: Angular, Status: Closed, 
+
+[TICKET] Id: ANN-1277, Title: Add application version to the navigation bar, Description: Add the deployed (and later, built) application version to the navigation bar. The application version is currently not available and we need to introduce it as an environment variable / Django setting. By default, it should be on the bottom of the open navigation bar (to also cover the mobile case)., Time spent: 1d, Assignee: Barna Mayer, Project: Annanow, Tech Stack: Django Template, Status: Closed, 
+
+, Status: Closed, 
+
+[TICKET] Id: #445, Title: Add Spanish translations to Bator, Description: Summary The application's language support is constantly evolving. So far the app is able to display translation for the words used by students in Hungarian, German, French, and Turkish. This issue covers grabbing Spanish translations from Azure's Translation API for the words we already collected with the application's AI. The "Native Language" select input must also be extended with the Spanish option, so users can Spanish as their native language. Motivation for change Support Spanish translations for our bag of words., Time spent: 2h, Assignee: Kristijan Bognar, Project: Bator, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-490, Title: Support French and English language, Description: Translate all UI to support German, French, Italian and English, Time spent: 1h, Assignee: Norbert Kiss, Project: Annanow, Tech Stack: Django Template, Status: Closed, 
+
+[TICKET] Id: ANN-566, Title: Order Slips, Description: Need to generate and print order slips as a PDF file., Time spent: 3h, Assignee: Zsuzsanna Ürmössy, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-138, Title: i18n Support: Internationalization of invoice and email texts, Description: Currently, the texts on the invoice and emails include: hard-coded German texts English reference data labels date formats, that are fixed to the Swiss/German standard A proper solution would be to introduce internationalization of texts, which enables rendering of language specific texts with the same source base., Time spent: 2h, Assignee: Gabor Ginter, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: ANN-001, Title: Option to print AlDI invoices as PDF, Description: Generate PDF from an invoice and add option to print it., Time spent: 2h, Assignee: Gabor Ginter, Project: Annanow, Tech Stack: Python, Status: Closed, 
+
+[TICKET] Id: #000, Title: Student data CSV, Description: Export Student data to CSV., Time spent: 2h, Assignee: Gabor Ginter, Project: Bator, Tech Stack: Python, Status: Closed, 
+

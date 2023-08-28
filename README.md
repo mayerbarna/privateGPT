@@ -27,7 +27,7 @@ Then, download the LLM model and place it in a directory of your choice:
 
 Copy the `example.env` template into `.env`
 ```shell
-cp example.env .env
+cp .env .env
 ```
 
 and edit the variables appropriately in the `.env` file.
