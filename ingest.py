@@ -72,7 +72,7 @@ class CSVLoaderPandas(CSVLoader):
         """Load data into document objects."""
 
         docs = []
-        csv = pd.read_csv(self.file_path, sep=';', encoding='ANSI')
+        csv = pd.read_csv(self.file_path, sep=';', encoding='utf-8')
 
         for index, row in csv.iterrows():
             content = "[TICKET] " + "".join([f"{header}: {value}, " for header, value in row.items()])

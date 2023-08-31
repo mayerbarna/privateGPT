@@ -1,0 +1,35 @@
+Ticket #2782 aims to automate the process of updating estimation data in the TPM database. The goal is to import Nielsen estimation files from an FTP server automatically, reducing the need for manual intervention by corporation admins. The ticket proposes a solution involving three files within a zip, including XLSX and CSV estimation files. The task also involves investigating the difference in size between two CSV files with identical content. The assignee, Barna Mayer, spent 32 hours implementing a Python-based solution, resulting in the ticket being marked as Closed under the TPM project.
+
+Ticket #2060 involves the creation of automated tests using Pytest to validate the functional requirements of the Nielsen importer. The aim is to enhance stability and prevent regressions. The ticket remains open and is assigned to Barna Mayer under the TPM project. The tech stack is Python.
+
+Ticket #2537 addresses the issue of handling duplicate spots during the CSV import process in the Nielsen Importer. The goal is to rectify the occurrence of unintended duplicate entries in the database. The solution involves resolving this behavior, and the task was successfully completed by Barna Mayer, who spent 10 hours on it. The ticket has been marked as Closed under the TPM project, with Python as the tech stack.
+
+Ticket #2319 involves addressing a discrepancy in GRP values between a report and Advantage. The issue arises due to the storage of values up to 6 decimal places. To enhance accuracy, the solution is to store values with 12 decimal places. Barna Mayer resolved this in 2 hours. The ticket is Closed under the TPM project, using Python.
+
+Ticket #1233 focuses on enabling TPM admins to upload estimation files. This entails implementing CSV import and the necessary upload process. Kis János completed this task using TypeScript in 20 hours. The ticket is Closed under the TPM project.
+
+Ticket ANN-1074 aims to allow users to export orders from the order list as a CSV file. This export should match the displayed order list, including search and filter criteria. Krisztián Salgó completed this under the Annanow project, using Python. The ticket is Closed.
+
+Ticket ANN-1139 addresses a CSV export format issue on different operating systems. The task involves fixing line breaks, which Krisztián Salgó accomplished in 1 hour. The ticket is Closed under the Annanow project, using Python.
+
+Ticket ANN-1164 involves modifying the Excel export process to exclude end customer information such as names, phone numbers, and email addresses. This change is necessary to adhere to data protection guidelines. The task was completed by Krisztián Salgó under the Annanow project using Python. The ticket is Closed.
+
+Ticket ANN-1525 focuses on adding end-to-end (E2E) tests for the delivery provider pricing page. Krisztián Salgó completed this task using Python under the Annanow project. The ticket is Closed.
+
+Ticket ANN-1477 pertains to the addition of E2E tests for Expert mode. Norbert Kiss completed this task using Python under the Annanow project. The ticket is Closed.
+
+Ticket #486 involves adding version numbering to an application and displaying the version number on the login screen. József Frank completed this task using Angular under the Bator project. The ticket is Closed.
+
+Ticket ANN-1277 focuses on adding the deployed or built application version to the navigation bar. This involves introducing the version as an environment variable or Django setting. Barna Mayer completed this task using Django Template under the Annanow project. The ticket is Closed.
+
+Ticket #445 involves adding Spanish translations to the Bator application. This includes obtaining translations from Azure's Translation API and extending the "Native Language" input with a Spanish option. Kristijan Bognar completed this task in 2 hours under the Bator project using Python. The ticket is Closed.
+
+Ticket ANN-490 focuses on translating the UI to support German, French, Italian, and English languages. Norbert Kiss completed this translation task in 1 hour using Django Template under the Annanow project. The ticket is Closed.
+
+Ticket ANN-566 involves generating and printing order slips as PDF files. Zsuzsanna Órmássy completed this task in 3 hours under the Annanow project using Python. The ticket is Closed.
+
+Ticket ANN-138 pertains to internationalizing invoice and email texts. The goal is to replace hard-coded German texts, English reference data labels, and fixed date formats with an internationalization solution. Gabor Ginter completed this task in 2 hours using Python under the Annanow project. The ticket is Closed.
+
+Ticket #000 involves exporting student data to a CSV file. Gabor Ginter completed this task in 2 hours under the Bator project using Python. The ticket is Closed.
+
+Ticket ANN-001 involves the addition of an option to generate PDF invoices for AlDI and provide the ability to print them. Gabor Ginter completed this task in 2 hours under the Annanow project using Python. The ticket is Closed.
