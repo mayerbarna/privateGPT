@@ -32,15 +32,14 @@ def main():
     args = parse_arguments()
     embeddings = HuggingFaceEmbeddings(model_name=embeddings_model_name)
     db = Chroma(persist_directory=persist_directory, embedding_function=embeddings, client_settings=CHROMA_SETTINGS)
-    retriever = db.as_retriever(search_type="similarity_score_threshold", search_kwargs={'score_threshold': 0.85})
+    retriever = db.as_retriever(search_kwargs={"k": target_source_chunks})
     # activate/deactivate the streaming StdOut callback for LLMs
     callbacks = [] if args.mute_stream else [StreamingStdOutCallbackHandler()]
     # Prepare the LLM
     if model_type == 'LlamaCpp':
         llm = LlamaCpp(model_path=model_path,
-                       temperature=0.75,
                        top_p=1,
-                       max_tokens=model_n_ctx,
+                       n_ctx=model_n_ctx,
                        n_batch=model_n_batch,
                        callbacks=callbacks,
                        verbose=True)
