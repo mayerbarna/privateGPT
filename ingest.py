@@ -87,7 +87,18 @@ class CSVLoaderPandas(CSVLoader):
                 raise ValueError(
                     f"Source column '{self.source_column}' not found in CSV file."
                 )
-            metadata = {"source": source, "row": index}
+            metadata = {
+                "source": source,
+                "row": index,
+                "id": row["Id"],
+                "title": row["Title"],
+                "description": row["Description"],
+                "project": row["Project"],
+                "time_spent": row["Time spent"],
+                "assignee": row["Assignee"],
+                "tech_stack": row["Tech Stack"],
+                "status": row["Status"],
+            }
             doc = Document(page_content=content, metadata=metadata)
             docs.append(doc)
 
